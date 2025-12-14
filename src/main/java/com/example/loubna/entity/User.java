@@ -1,5 +1,6 @@
 package com.example.loubna.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import java.util.List;
 
@@ -21,6 +22,7 @@ public class User {
 
     // Un utilisateur a plusieurs projets
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Project> projects;
 
     public User() {
