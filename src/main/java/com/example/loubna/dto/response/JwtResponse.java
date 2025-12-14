@@ -13,8 +13,7 @@ public class JwtResponse {
         this.name = name;
         this.email = email;
     }
-
-    // Getters et Setters
+    
     public String getToken() { return token; }
     public void setToken(String token) { this.token = token; }
 
